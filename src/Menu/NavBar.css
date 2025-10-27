@@ -11,7 +11,7 @@
 /* Navbar layout */
 .navbar {
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   gap: 60px;
   padding: 18px 20px;
