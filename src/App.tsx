@@ -1,26 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Weather from './components/Bai1/Weather';
+import StudentList from './components/Bai2/StudentList';
+import StudentDetail from './components/Bai2/StudentDetail';
+import NewsList from './components/Bai3/NewsList';
+import Navbar from './Menu/NavBar';
 import './App.css';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+        <Router>
+      <Navbar />
+      <div className="container">
+        <Routes>
+          <Route path="/bai1" element={<Weather />} />
+          <Route path="/bai2" element={<StudentList />} />
+          <Route path="/bai2/:id" element={<StudentDetail />} />
+          <Route path="/bai3" element={<NewsList />} />
+        </Routes>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;

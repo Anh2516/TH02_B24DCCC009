@@ -1,0 +1,75 @@
+/* Container tổng */
+.news-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fafafa;
+  border-radius: 12px;
+}
+
+/* Lưới bài báo ngang */
+.news-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Card mỗi bài */
+.news-item {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.news-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.news-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.news-item-content {
+  padding: 16px 18px;
+}
+
+.news-item-content h2 {
+  font-size: 1.1rem;
+  color: #0078ff;
+  margin-bottom: 8px;
+}
+
+.news-item-content p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.news-item-content .date {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.news-item-content a {
+  display: inline-block;
+  color: #fff;
+  background: #0078ff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.news-item-content a:hover {
+  background: #005fcc;
+}

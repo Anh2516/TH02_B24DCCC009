@@ -1,0 +1,70 @@
+/* NavBar.css */
+.container-navbar {
+  width: 100%;
+  background: linear-gradient(90deg, #0078ff, #00c6ff);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Navbar layout */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  padding: 18px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Link style */
+.navbar a {
+  color: #ffffff;
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+/* Hiệu ứng gạch chân chuyển động */
+.navbar a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  bottom: -6px;
+  left: 0;
+  background-color: #ffffff;
+  transition: width 0.3s ease;
+  border-radius: 5px;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+.navbar a:hover {
+  color: #f0f0f0;
+}
+
+/* Hiệu ứng hover nhẹ */
+.navbar a:active {
+  transform: scale(0.95);
+}
+
+/* Responsive cho mobile */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 14px;
+    padding: 16px;
+  }
+
+  .navbar a {
+    font-size: 1.1rem;
+  }
+}
+/* End of NavBar.css */

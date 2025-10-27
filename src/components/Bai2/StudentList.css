@@ -1,0 +1,70 @@
+/* StudentList.css */
+.student-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 25px 30px;
+  background: #fdfdfd;
+  border-radius: 18px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.1);
+  font-family: "Poppins", sans-serif;
+}
+
+.student-container h2 {
+  text-align: center;
+  color: #0078ff;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  border-bottom: 3px solid #0078ff;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.student-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.student-item {
+  background-color: #ffffff;
+  margin-bottom: 14px;
+  padding: 16px 18px;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.student-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 5px 14px rgba(0, 120, 255, 0.2);
+  background-color: #f9fcff;
+}
+
+.student-item a {
+  color: #0078ff;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.05rem;
+  transition: color 0.25s ease;
+}
+
+.student-item a:hover {
+  color: #005fcc;
+  text-decoration: underline;
+}
+
+.student-email {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+@media (max-width: 600px) {
+  .student-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}
