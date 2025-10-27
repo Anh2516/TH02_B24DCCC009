@@ -27,28 +27,27 @@ export default function WeatherApp() {
     }
   };
 
-  return (
+return (
   <div className="container">
-    <h1>⛅ Thời tiết</h1>
-
-    <div style={{ marginBottom: "20px" }}>
-      <input 
+    <div className="weather-card">
+      <div className="weather-icon">⛅</div>
+      <input
         value={city}
         onChange={(e) => setCity(e.target.value)}
         placeholder="Nhập tên thành phố..."
       />
       <button onClick={fetchWeather}>Xem</button>
+
+      {loading && <p>Đang tải...</p>}
+      {error && <p style={{ color: "red" }}>{error}</p>}
+
+      {weather && (
+        <div>
+          <h3>Nhiệt độ: {weather.temp_C}°C</h3>
+          <p>{weather.weatherDesc[0].value}</p>
+        </div>
+      )}
     </div>
-
-    {loading && <p>Đang tải...</p>}
-    {error && <p style={{ color: "#ffdddd" }}>{error}</p>}
-
-    {weather && (
-      <div className="weather-info">
-        <h3>Nhiệt độ: {weather.temp_C}°C</h3>
-        <p>{weather.weatherDesc[0].value}</p>
-      </div>
-    )}
   </div>
 );
 }
